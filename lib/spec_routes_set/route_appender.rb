@@ -1,5 +1,6 @@
 module RouteAppender
   def self.add(routes)
-    RouteAccessor.eval_block(routes)
+    accessor = RouteAccessor.new
+    accessor.eval_block(routes)
   end
 end
